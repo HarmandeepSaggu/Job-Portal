@@ -1,4 +1,5 @@
-// middleware.js in your Next.js root
+// middleware.js 
+// middleware.js 
 import { NextResponse } from 'next/server';
 
 export function middleware(request) {
