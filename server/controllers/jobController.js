@@ -65,7 +65,7 @@ exports.deleteJob = async (req, res) => {
     if (job.employer.toString() !== req.user.id)
       return res.status(403).json({ message: 'Unauthorized' });
 
-    await Job.findByIdAndDelete(req.params.id); // ✅ This replaces job.remove()
+    await Job.findByIdAndDelete(req.params.id); 
     res.json({ message: 'Job deleted successfully' });
   } catch (error) {
     res.status(500).json({ message: error.message });
